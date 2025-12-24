@@ -8,16 +8,27 @@ import {
 } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useThemeContext } from "../../theme/ThemeContext";
-
-export const AppBar = () => {
+interface AppBarProps {
+  position?: "fixed" | "static" | "relative" | "absolute";
+}
+export const AppBar = ({ position = "fixed" }: AppBarProps) => {
   // Get current theme mode and toggle function
   const { mode, toggleTheme } = useThemeContext();
 
   return (
-    <MuiAppBar position="static" color="primary" elevation={1}>
+    <MuiAppBar
+      position={position}
+      color="primary"
+      elevation={1}
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    >
       <Toolbar>
         {/* Left side: dashboard title */}
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h6"
+          component="div"
+          sx={{ flexGrow: 1, color: "inherit" }}
+        >
           React Dashboard
         </Typography>
 
