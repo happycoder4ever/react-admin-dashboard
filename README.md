@@ -1,6 +1,6 @@
 # React Admin Dashboard
 
-![CI](https://img.shields.io/badge/build-passing-brightgreen)
+![CI](https://github.com/happycoder4ever/react-admin-dashboard/actions/workflows/ci.yml/badge.svg)
 ![React](https://img.shields.io/badge/React-18-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-✔-3178c6)
 ![MUI](https://img.shields.io/badge/MUI-v7-007fff)
